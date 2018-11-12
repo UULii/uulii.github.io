@@ -83,18 +83,18 @@
 
 
 
-<meta name="description" content="原文参考链接 清除全局配置查看config --global user.name ```1``` git config --global user.email 清除config --global --unset user.name```1```git config --global --unset user.email 密钥进入目录~/.ssh```12#### 生成密钥```ssh-keygen">
+<meta name="description" content="原文参考链接 清除全局配置查看config --global user.name ```1``` git config --global user.email 清除config --global --unset user.name```1```git config --global --unset user.email 密钥进入目录~/.ssh```12#### 生成密钥    ```ssh-ke">
 <meta name="keywords" content="github,多账户">
 <meta property="og:type" content="article">
 <meta property="og:title" content="github多账户设置">
 <meta property="og:url" content="http://yoursite.com/2018/11/12/github多账户设置/index.html">
 <meta property="og:site_name" content="优优的饲养员">
-<meta property="og:description" content="原文参考链接 清除全局配置查看config --global user.name ```1``` git config --global user.email 清除config --global --unset user.name```1```git config --global --unset user.email 密钥进入目录~/.ssh```12#### 生成密钥```ssh-keygen">
+<meta property="og:description" content="原文参考链接 清除全局配置查看config --global user.name ```1``` git config --global user.email 清除config --global --unset user.name```1```git config --global --unset user.email 密钥进入目录~/.ssh```12#### 生成密钥    ```ssh-ke">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-12T09:03:22.865Z">
+<meta property="og:updated_time" content="2018-11-12T09:11:18.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="github多账户设置">
-<meta name="twitter:description" content="原文参考链接 清除全局配置查看config --global user.name ```1``` git config --global user.email 清除config --global --unset user.name```1```git config --global --unset user.email 密钥进入目录~/.ssh```12#### 生成密钥```ssh-keygen">
+<meta name="twitter:description" content="原文参考链接 清除全局配置查看config --global user.name ```1``` git config --global user.email 清除config --global --unset user.name```1```git config --global --unset user.email 密钥进入目录~/.ssh```12#### 生成密钥    ```ssh-ke">
 
 
 
@@ -325,14 +325,24 @@
 
       
         <p><a href="https://segmentfault.com/a/1190000016269686?utm_source=tag-newest" target="_blank" rel="noopener">原文参考链接</a></p>
-<h3 id="清除全局配置"><a href="#清除全局配置" class="headerlink" title="清除全局配置"></a>清除全局配置</h3><h4 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h4><figure class="highlight plain"><figcaption><span>config --global user.name ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">``` git config --global user.email</span><br></pre></td></tr></table></figure>
-<h4 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h4><figure class="highlight plain"><figcaption><span>config --global --unset user.name```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```git config --global --unset user.email</span><br></pre></td></tr></table></figure>
-<h3 id="密钥"><a href="#密钥" class="headerlink" title="密钥"></a>密钥</h3><h4 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h4><figure class="highlight plain"><figcaption><span>~/.ssh```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 生成密钥</span><br><span class="line">```ssh-keygen -t rsa -C &quot;登录邮箱&quot; 对应生成不同的密钥</span><br></pre></td></tr></table></figure>
-<h4 id="添加密钥到本地"><a href="#添加密钥到本地" class="headerlink" title="添加密钥到本地"></a>添加密钥到本地</h4><figure class="highlight plain"><figcaption><span>~/.ssh/密钥私钥名称 ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 验证是否添加到本地</span><br><span class="line">```ssh-add -l</span><br></pre></td></tr></table></figure>
-<h4 id="生成本地密钥配置文件"><a href="#生成本地密钥配置文件" class="headerlink" title="生成本地密钥配置文件"></a>生成本地密钥配置文件</h4><figure class="highlight plain"><figcaption><span>config```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 本地密钥配置文件内容</span><br></pre></td></tr></table></figure>
-<p>Host github1 // 网站的别名，随意取<br>HostName github.com // 托管网站的域名<br>User github1 // 托管网站上的用户名<br>IdentityFile ~/.ssh/id_rsa_github1 // 使用的密钥文件</p>
-<p>Host gitlab2<br>HostName gitlab.com<br>User gitlab2<br>IdentityFile ~/.ssh/id_rsa_gitlab2<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#### 公钥添加到托管网站</span><br><span class="line"></span><br><span class="line">#### 测试配置是否成功</span><br><span class="line">```ssh -T git@网站别名</span><br></pre></td></tr></table></figure></p>
-<h4 id="Coding-net"><a href="#Coding-net" class="headerlink" title="Coding.net"></a>Coding.net</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Host coding</span><br><span class="line">HostName git-ssh.coding.net // 这个域名使用coding官网获取的，不能写coding.net</span><br><span class="line">User liugui</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_coding</span><br><span class="line">Port 443 // 20端口可能被禁用，需要使用443端口</span><br></pre></td></tr></table></figure>
+<h3 id="清除全局配置"><a href="#清除全局配置" class="headerlink" title="清除全局配置"></a>清除全局配置</h3><h4 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h4><pre><code><figure class="highlight plain"><figcaption><span>config --global user.name ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">``` git config --global user.email</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="清除"><a href="#清除" class="headerlink" title="清除"></a>清除</h4><pre><code><figure class="highlight plain"><figcaption><span>config --global --unset user.name```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```git config --global --unset user.email</span><br></pre></td></tr></table></figure>
+</code></pre><h3 id="密钥"><a href="#密钥" class="headerlink" title="密钥"></a>密钥</h3><h4 id="进入目录"><a href="#进入目录" class="headerlink" title="进入目录"></a>进入目录</h4><pre><code><figure class="highlight plain"><figcaption><span>~/.ssh```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 生成密钥</span><br><span class="line">    ```ssh-keygen -t rsa -C &quot;登录邮箱&quot; 对应生成不同的密钥</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="添加密钥到本地"><a href="#添加密钥到本地" class="headerlink" title="添加密钥到本地"></a>添加密钥到本地</h4><pre><code><figure class="highlight plain"><figcaption><span>~/.ssh/密钥私钥名称 ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#### 验证是否添加到本地</span><br><span class="line">    ```ssh-add -l</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="生成本地密钥配置文件"><a href="#生成本地密钥配置文件" class="headerlink" title="生成本地密钥配置文件"></a>生成本地密钥配置文件</h4><pre><code><figure class="highlight plain"><figcaption><span>config```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 本地密钥配置文件内容</span><br></pre></td></tr></table></figure>
+
+Host github1 // 网站的别名，随意取
+HostName github.com // 托管网站的域名
+User github1 // 托管网站上的用户名
+IdentityFile ~/.ssh/id_rsa_github1 // 使用的密钥文件
+
+Host gitlab2
+HostName gitlab.com
+User gitlab2
+IdentityFile ~/.ssh/id_rsa_gitlab2
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#### 公钥添加到托管网站</span><br><span class="line"></span><br><span class="line">#### 测试配置是否成功</span><br><span class="line">    ```ssh -T git@网站别名</span><br></pre></td></tr></table></figure>
+</code></pre><h4 id="Coding-net"><a href="#Coding-net" class="headerlink" title="Coding.net"></a>Coding.net</h4><pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Host coding</span><br><span class="line">HostName git-ssh.coding.net // 这个域名使用coding官网获取的，不能写coding.net</span><br><span class="line">User liugui</span><br><span class="line">IdentityFile ~/.ssh/id_rsa_coding</span><br><span class="line">Port 443 // 20端口可能被禁用，需要使用443端口</span><br></pre></td></tr></table></figure>
+</code></pre>
       
     </div>
     
