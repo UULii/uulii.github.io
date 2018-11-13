@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-13T03:36:52.456Z</updated>
+  <updated>2018-11-13T03:55:13.126Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="http://yoursite.com/2018/11/13/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"/>
     <id>http://yoursite.com/2018/11/13/hexo安装与使用/</id>
     <published>2018-11-13T03:02:20.000Z</published>
-    <updated>2018-11-13T03:36:52.456Z</updated>
+    <updated>2018-11-13T03:55:13.126Z</updated>
     
-    <content type="html"><![CDATA[<p>依赖hexo+github搭建个人博客，简单步骤：安装node.js、git和hexo，关联github账户，创建page仓库，下载主题，配置主题，添加文章，生成静态页面，部署到github。</p><h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code>http://nodejs.cn            官网下载安装</code></pre><h4 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h4><pre><code>$  node -v                  产看node版本$  sudo npm cache clean -f  清楚node缓存$  sudo npm install n -g    安装node版本管理工具&apos;n&apos;$  sudo n stable            安装node最新版本$  sudo n 8.9.4             安装node指定版本8.9.4</code></pre><h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><pre><code>https://git-scm.com/downloads 官网下载安装</code></pre><h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><pre><code>$ npm install -g hexo-cli   使用 npm 安装 Hexo</code></pre><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><pre><code>$ hexo init /xxx/xxx/       创建文件夹并初始化hexo$ sudo npm install          安装依赖包$ hexo clean                清理缓存$ hexo generate             生成静态文件$ hexo server               启动本地服务器或者$ hexo clean                清理缓存$ hexo g                    生成静态文件$ hexo s                    启动本地服务器$ hexo new xxx              新的文章xxx</code></pre><h4 id="关联github"><a href="#关联github" class="headerlink" title="关联github"></a>关联github</h4><pre><code>创建仓库w名为 username.github.io配置_config.yml 关联githubdeploy:    type: git    repository: git@xxx:xxx/xxx.github.io    branch: master$ npm install hexo-deployer-git --save 确认依赖包和插件安装完成$ hexo clean                清理缓存$ hexo g                    生成静态文件$ hexo d                    部署或 $ hexo deploy               部署</code></pre><h4 id="NexT-主题"><a href="#NexT-主题" class="headerlink" title="NexT 主题"></a>NexT 主题</h4><pre><code>[使用文档](http://theme-next.iissnan.com)</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>简介：依赖hexo+github搭建个人博客，简单步骤：安装node.js、git和hexo，关联github账户，创建page仓库，下载主题，配置主题，添加文章，生成静态页面，部署到github。</p><h3 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code>http://nodejs.cn            官网下载安装</code></pre><h4 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h4><pre><code>$  node -v                  产看node版本$  sudo npm cache clean -f  清楚node缓存$  sudo npm install n -g    安装node版本管理工具&apos;n&apos;$  sudo n stable            安装node最新版本$  sudo n 8.9.4             安装node指定版本8.9.4</code></pre><h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><pre><code>https://git-scm.com/downloads 官网下载安装</code></pre><h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><pre><code>$ npm install -g hexo-cli   使用 npm 安装 Hexo</code></pre><h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><pre><code>$ hexo init /xxx/xxx/       创建文件夹并初始化hexo$ sudo npm install          安装依赖包$ hexo clean                清理缓存$ hexo generate             生成静态文件$ hexo server               启动本地服务器或者$ hexo clean                清理缓存$ hexo g                    生成静态文件$ hexo s                    启动本地服务器$ hexo new xxx              新的文章xxx</code></pre><h4 id="关联github"><a href="#关联github" class="headerlink" title="关联github"></a>关联github</h4><pre><code>创建仓库w名为 username.github.io配置_config.yml 关联githubdeploy:    type: git    repository: git@xxx:xxx/xxx.github.io    branch: master$ npm install hexo-deployer-git --save 确认依赖包和插件安装完成$ hexo clean                清理缓存$ hexo g                    生成静态文件$ hexo d                    部署或 $ hexo deploy               部署</code></pre><h4 id="NexT-主题"><a href="#NexT-主题" class="headerlink" title="NexT 主题"></a>NexT 主题</h4><pre><code>[使用文档](http://theme-next.iissnan.com)</code></pre>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;依赖hexo+github搭建个人博客，简单步骤：安装node.js、git和hexo，关联github账户，创建page仓库，下载主题，配置主题，添加文章，生成静态页面，部署到github。&lt;/p&gt;
-&lt;h3 id=&quot;node-js&quot;&gt;&lt;a href=&quot;#node-js&quot; 
+        &lt;p&gt;简介：依赖hexo+github搭建个人博客，简单步骤：安装node.js、git和hexo，关联github账户，创建page仓库，下载主题，配置主题，添加文章，生成静态页面，部署到github。&lt;/p&gt;
+&lt;h3 id=&quot;node-js&quot;&gt;&lt;a href=&quot;#node-j
       
     
     </summary>
