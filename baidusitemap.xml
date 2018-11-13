@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/2018/11/13/%E7%A6%85%E4%B8%8EObjective-C%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/</loc>
+    <lastmod>2018-11-13T07:15:19.410Z</lastmod>
+  </url>  <url>
     <loc>http://yoursite.com/2018/11/13/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2018-11-13T03:55:13.126Z</lastmod>
+    <lastmod>2018-11-13T03:56:47.436Z</lastmod>
   </url>  <url>
     <loc>http://yoursite.com/2018/11/12/github%E5%A4%9A%E8%B4%A6%E6%88%B7%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2018-11-13T03:52:32.364Z</lastmod>
+  </url>  <url>
+    <loc>http://yoursite.com/2018/04/30/README-En/</loc>
+    <lastmod>2018-04-30T09:17:36.000Z</lastmod>
   </url>
 </urlset>

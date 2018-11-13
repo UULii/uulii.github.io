@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2018/11/13/%E7%A6%85%E4%B8%8EObjective-C%E7%BC%96%E7%A8%8B%E8%89%BA%E6%9C%AF/</loc>
+    
+    <lastmod>2018-11-13T07:15:19.410Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2018/11/13/hexo%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/</loc>
     
-    <lastmod>2018-11-13T03:55:13.126Z</lastmod>
+    <lastmod>2018-11-13T03:56:47.436Z</lastmod>
     
   </url>
   
@@ -26,6 +33,13 @@
     <loc>http://yoursite.com/tags/index.html</loc>
     
     <lastmod>2018-11-13T02:21:46.766Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2018/04/30/README-En/</loc>
+    
+    <lastmod>2018-04-30T09:17:36.000Z</lastmod>
     
   </url>
   
