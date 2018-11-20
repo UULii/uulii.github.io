@@ -90,7 +90,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/11/13/禅与Objective-C编程艺术英文版/images/zen-logo-thumb.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/13/禅与Objective-C编程艺术英文版/source/images/yoda.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/13/禅与Objective-C编程艺术英文版/images/blocks_debugger.png">
-<meta property="og:updated_time" content="2018-11-20T02:31:52.735Z">
+<meta property="og:updated_time" content="2018-11-20T02:40:04.148Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="禅与Objective-C编程艺术英文版">
 <meta name="twitter:description" content="Zen and the Art of the Objective-C Craftsmanship  Preface Swift For the Community Authors   Conditionals Yoda conditions nil and BOOL checks Golden Path Complex Conditions Ternary Operator Error handl">
@@ -357,7 +357,7 @@
       
 
       
-        <h1 id="Zen-and-the-Art-of-the-Objective-C-Craftsmanship"><a href="#Zen-and-the-Art-of-the-Objective-C-Craftsmanship" class="headerlink" title="Zen and the Art of the Objective-C Craftsmanship"></a>Zen and the Art of the Objective-C Craftsmanship</h1><p><img src="./images/zen-logo-thumb.png" alt=""></p>
+        <h1 id="Zen-and-the-Art-of-the-Objective-C-Craftsmanship"><a href="#Zen-and-the-Art-of-the-Objective-C-Craftsmanship" class="headerlink" title="Zen and the Art of the Objective-C Craftsmanship"></a>Zen and the Art of the Objective-C Craftsmanship</h1><p><img src="/2018/11/13/禅与Objective-C编程艺术英文版/./images/zen-logo-thumb.png" alt=""></p>
 <ul>
 <li><a href="#preface">Preface</a><ul>
 <li><a href="#swift">Swift</a></li>
@@ -500,7 +500,7 @@
 <p>Easy to spot, there are 2 <code>goto fail;</code> lines one after the other without parentheses. We definitely don’t want to risk creating bugs like the one above right?</p>
 <p>In addition, this style is more consistent with all other conditionals, and therefore more easily scannable.</p>
 <h2 id="Yoda-conditions"><a href="#Yoda-conditions" class="headerlink" title="Yoda conditions"></a>Yoda conditions</h2><p>Always avoid Yoda conditions. A Yoda condition is when comparing a constant to a variable instead of the other way around. It’s like saying “if blue is the sky” or “if tall is the man” instead of “if the sky is blue” or “if the man is tall”.</p>
-<p><img src="./source/images/yoda.png" alt="Yoda"></p>
+<p><img src="/2018/11/13/禅与Objective-C编程艺术英文版/./source/images/yoda.png" alt="Yoda"></p>
 <p><strong>Preferred:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ([myValue isEqual:@42]) &#123; ...</span><br></pre></td></tr></table></figure></p>
 <p><strong>Not preferred:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ([@42 isEqual:myValue]) &#123; ...</span><br></pre></td></tr></table></figure></p>
 <h2 id="nil-and-BOOL-checks"><a href="#nil-and-BOOL-checks" class="headerlink" title="nil and BOOL checks"></a>nil and BOOL checks</h2><p>On a similar note of the Yoda conditions, also the nil check has been at the centre of debates. Some notous libraries out there use to check for an object to be or not to be nil as so:</p>
@@ -880,7 +880,7 @@
 </ul>
 <p>If blocks aren’t kept around anywhere, will remain on the stack and will go away when their stack frame returns. While on the stack, a block has no effect on the storage or lifetime of anything it accesses. If blocks need to exist after the stack frame returns, they can be copied to the heap and this action is an explicit operation. This way, a block will gain reference-counting as all objects in Cocoa. When they are copied, they take their captured scope with them, retaining any objects they refer. If a block references a stack variable or pointer, then when the block is initialized it is given its own copy of that variable declared const, so assignments won’t work. When a block is copied, the <code>__block</code> stack variables it reference are copied to the heap and after the copy operation both block on the stack and brand new block on the heap refer to the variables on the heap.</p>
 <p>LLDB shows that a block is a nice piece of things.</p>
-<p><img src="./images/blocks_debugger.png" alt=""></p>
+<p><img src="/2018/11/13/禅与Objective-C编程艺术英文版/./images/blocks_debugger.png" alt=""></p>
 <p>The most important thing to note is that <code>__block</code> variables and pointers are treated inside the block as structs that obviously handle the reference to the real value/object.</p>
 <p>Blocks are first-class citizens in the Objective-C runtime: they have an <code>isa</code> pointer which defines a class through which the Objective-C runtime can access methods and storage. In a non-ARC environment you can mess things up for sure, and cause crashes due to dangling pointers. <code>__block</code> applies only when using the variables in the block, it simply says to the block:</p>
 <blockquote>

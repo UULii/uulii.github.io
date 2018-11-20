@@ -361,7 +361,7 @@
 <li>原文 <a href="https://github.com/objc-zen/objc-zen-book" target="_blank" rel="noopener">https://github.com/objc-zen/objc-zen-book</a></li>
 <li>Gitbook 链接(包含 PDF, mobi, epub 格式): <a href="http://yourtion.gitbooks.io/objc-zen-book-cn/" target="_blank" rel="noopener">http://yourtion.gitbooks.io/objc-zen-book-cn/</a> (感谢 <a href="https://github.com/yourtion" target="_blank" rel="noopener">yourtion</a> 整理 )</li>
 </ul>
-<p><img src="./images/zen-logo-thumb.png" alt=""></p>
+<p><img src="/2018/11/13/禅与Objective-C编程艺术中文版/./images/zen-logo-thumb.png" alt=""></p>
 <ul>
 <li><a href="#前言">前言</a><ul>
 <li><a href="#swift">Swift</a></li>
@@ -528,7 +528,7 @@
 <p>显而易见，这里有没有括号包围的2行连续的 <code>goto fail;</code> 。我们当然不希望写出上面的代码导致错误。</p>
 <p>此外，在其他条件语句里面也应该按照这种风格统一，这样更便于检查。</p>
 <h2 id="尤达表达式"><a href="#尤达表达式" class="headerlink" title="尤达表达式"></a>尤达表达式</h2><p>不要使用尤达表达式。尤达表达式是指，拿一个常量去和变量比较而不是拿变量去和常量比较。它就像是在表达 “蓝色是不是天空的颜色” 或者 “高个是不是这个男人的属性” 而不是  “天空是不是蓝的” 或者 “这个男人是不是高个子的”</p>
-<p><img src="./images/yoda.png" alt="Yoda"></p>
+<p><img src="/2018/11/13/禅与Objective-C编程艺术中文版/./images/yoda.png" alt="Yoda"></p>
 <p>（译者注：名字起源于星球大战中尤达大师的讲话方式，总是用倒装的语序）</p>
 <p><strong>推荐:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ([myValue isEqual:@42]) &#123; ...</span><br></pre></td></tr></table></figure></p>
 <p><strong>不推荐:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ([@42 isEqual:myValue]) &#123; ...</span><br></pre></td></tr></table></figure></p>
@@ -981,7 +981,7 @@
 <p>(下面代码是译者加的)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">CGFloat blockInt = 10;</span><br><span class="line">void (^playblock)(void) = ^&#123;</span><br><span class="line">    NSLog(@&quot;blockInt = %zd&quot;, blockInt);</span><br><span class="line">&#125;;</span><br><span class="line">blockInt++;</span><br><span class="line">playblock();</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">// 结果为:blockInt = 10</span><br></pre></td></tr></table></figure>
 <p>用 LLDB 来展示 block 是这样子的：</p>
-<p><img src="./images/blocks_debugger.png" alt=""></p>
+<p><img src="/2018/11/13/禅与Objective-C编程艺术中文版/./images/blocks_debugger.png" alt=""></p>
 <p>最重要的事情是 <code>__block</code> 声明的变量和指针在 block 里面是作为显示操作真实值/对象的结构来对待的。</p>
 <p>block 在 Objective-C 的 runtime(运行时) 里面被当作一等公民对待：他们有一个 <code>isa</code> 指针，一个类也是用 <code>isa</code> 指针在Objective-C 运行时来访问方法和存储数据的。在非 ARC 环境肯定会把它搞得很糟糕，并且悬挂指针会导致 crash。<code>__block</code> 仅仅对 block 内的变量起作用，它只是简单地告诉 block：</p>
 <blockquote>
