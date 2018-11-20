@@ -88,9 +88,9 @@
 <meta property="og:description" content="Zen and the Art of the Objective-C Craftsmanship  Preface Swift For the Community Authors   Conditionals Yoda conditions nil and BOOL checks Golden Path Complex Conditions Ternary Operator Error handl">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/11/13/禅与Objective-C编程艺术英文版/images/zen-logo-thumb.png">
-<meta property="og:image" content="http://yoursite.com/2018/11/13/禅与Objective-C编程艺术英文版/images/yoda.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/13/禅与Objective-C编程艺术英文版/source/images/yoda.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/13/禅与Objective-C编程艺术英文版/images/blocks_debugger.png">
-<meta property="og:updated_time" content="2018-11-13T07:23:26.122Z">
+<meta property="og:updated_time" content="2018-11-20T02:31:52.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="禅与Objective-C编程艺术英文版">
 <meta name="twitter:description" content="Zen and the Art of the Objective-C Craftsmanship  Preface Swift For the Community Authors   Conditionals Yoda conditions nil and BOOL checks Golden Path Complex Conditions Ternary Operator Error handl">
@@ -500,7 +500,7 @@
 <p>Easy to spot, there are 2 <code>goto fail;</code> lines one after the other without parentheses. We definitely don’t want to risk creating bugs like the one above right?</p>
 <p>In addition, this style is more consistent with all other conditionals, and therefore more easily scannable.</p>
 <h2 id="Yoda-conditions"><a href="#Yoda-conditions" class="headerlink" title="Yoda conditions"></a>Yoda conditions</h2><p>Always avoid Yoda conditions. A Yoda condition is when comparing a constant to a variable instead of the other way around. It’s like saying “if blue is the sky” or “if tall is the man” instead of “if the sky is blue” or “if the man is tall”.</p>
-<p><img src="./images/yoda.png" alt="Yoda"></p>
+<p><img src="./source/images/yoda.png" alt="Yoda"></p>
 <p><strong>Preferred:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ([myValue isEqual:@42]) &#123; ...</span><br></pre></td></tr></table></figure></p>
 <p><strong>Not preferred:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if ([@42 isEqual:myValue]) &#123; ...</span><br></pre></td></tr></table></figure></p>
 <h2 id="nil-and-BOOL-checks"><a href="#nil-and-BOOL-checks" class="headerlink" title="nil and BOOL checks"></a>nil and BOOL checks</h2><p>On a similar note of the Yoda conditions, also the nil check has been at the centre of debates. Some notous libraries out there use to check for an object to be or not to be nil as so:</p>
